@@ -1,7 +1,5 @@
 package com.sylvanas.algorithms_exercise.string;
 
-import java.util.Scanner;
-
 /**
  * 给定一个字符串s，你可以从中删除一些字符，使得剩下的串是一个回文串。如何删除才能使得回文串最长呢？
  *
