@@ -5,9 +5,9 @@ package com.sylvanas.algorithms_exercise.string;
  *
  * Created by SylvanasSun on 9/1/2017.
  */
-public class ConstructionPlalindrome {
+public class ConstructionPalindrome {
 
-    public static int construction_plalindrome(String str) {
+    public static int construction_palindrome(String str) {
         if (str == null || "".equals(str))
             throw new IllegalArgumentException("String is empty or null!");
 
@@ -38,8 +38,8 @@ public class ConstructionPlalindrome {
     }
 
     public static void main(String[] args) {
-        int google = construction_plalindrome("google");
-        int abcda = construction_plalindrome("abcda");
+        int google = construction_palindrome("google");
+        int abcda = construction_palindrome("abcda");
         assert google == 2;
         assert abcda == 2;
     }
