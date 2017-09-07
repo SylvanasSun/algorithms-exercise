@@ -1,4 +1,4 @@
-package com.sylvanas.algorithms_exercise.number;
+package com.sylvanas.algorithms_exercise.math;
 
 import java.util.*;
 
