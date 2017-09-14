@@ -26,7 +26,7 @@ public class SearchTwoDimensionMatrix2 {
         int x = row;
         int y = 0;
 
-        while (x >= 0 && y < col) {
+        while (x >= 0 && y <= col) {
             int pivot = matrix[x][y];
             if (pivot == target) {
                 result++;
