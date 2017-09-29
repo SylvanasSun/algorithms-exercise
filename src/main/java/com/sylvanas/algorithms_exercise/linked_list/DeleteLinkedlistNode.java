@@ -26,9 +26,8 @@ public class DeleteLinkedlistNode {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode temp = head;
-        head.next = temp;
         for (int i = 2; i <= 4; i++) {
-            temp = new ListNode(i);
+            temp.next = new ListNode(i);
             temp = temp.next;
         }
 
