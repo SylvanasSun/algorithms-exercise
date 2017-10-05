@@ -1,9 +1,5 @@
 package com.sylvanas.algorithms_exercise.tree;
 
-import com.sylvanas.algorithms_exercise.linked_list.ListNode;
-import jdk.nashorn.internal.objects.NativeUint8Array;
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
