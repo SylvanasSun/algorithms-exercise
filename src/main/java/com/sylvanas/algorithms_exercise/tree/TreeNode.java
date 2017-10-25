@@ -5,11 +5,11 @@ package com.sylvanas.algorithms_exercise.tree;
  */
 public class TreeNode<Value> {
 
-    private Value value;
+    Value value;
 
-    private TreeNode<Value> left;
+    TreeNode<Value> left;
 
-    private TreeNode<Value> right;
+    TreeNode<Value> right;
 
     public TreeNode(TreeNode<Value> left, TreeNode<Value> right, Value value) {
         this.left = left;
