@@ -11,6 +11,10 @@ public class TreeNode<Value> {
 
     TreeNode<Value> right;
 
+    public TreeNode() {
+
+    }
+
     public TreeNode(TreeNode<Value> left, TreeNode<Value> right, Value value) {
         this.left = left;
         this.right = right;
