@@ -127,6 +127,7 @@ public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
         Node<K, V> node = head;
         Node<K, V> next = null;
         Node<K, V> down = null;
+        K nodeKey = null;
 
         while (true) {
             // Searching nearest (less than or equal) node with special key
@@ -135,6 +136,9 @@ public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
                 node = next;
                 next = node.getNext();
             }
+            nodeKey = node.getKey();
+            if (nodeKey != null && nodeKey.compareTo(key) == 0)
+                break;
             // Descend to the bottom for continue search
             down = node.getDown();
             if (down != null) {
