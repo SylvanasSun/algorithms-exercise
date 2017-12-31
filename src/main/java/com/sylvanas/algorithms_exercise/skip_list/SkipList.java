@@ -91,6 +91,9 @@ public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
         if (node == null || node.getKey().compareTo(key) != 0)
             throw new NoSuchElementException("The key is not exist!");
 
+        // Move to the bottom
+        while (node.getDown() != null)
+            node = node.getDown();
         // Because node is on the lowest level so we need remove by down-top
         Node<K, V> prev = null;
         Node<K, V> next = null;
