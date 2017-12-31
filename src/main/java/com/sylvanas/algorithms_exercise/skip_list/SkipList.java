@@ -60,11 +60,11 @@ public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
         Node<K, V> newNode = new Node<K, V>(key, value, node.getLevel());
         horizontalInsert(node, newNode);
         // Decide level according to the probability function
-        int temporaryLevel = 0;
+        int currentLevel = node.getLevel();
         int headLevel = head.getLevel();
         while (isBuildLevel()) {
             // buiding a new level
-            if (temporaryLevel >= headLevel) {
+            if (currentLevel >= headLevel) {
                 Node<K, V> newHead = new Node<K, V>(null, null, headLevel + 1);
                 verticalLink(newHead, head);
                 head = newHead;
@@ -80,7 +80,7 @@ public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
             horizontalInsert(node, tmp);
             verticalLink(tmp, newNode);
             newNode = tmp;
-            temporaryLevel++;
+            currentLevel++;
         }
         size++;
     }
