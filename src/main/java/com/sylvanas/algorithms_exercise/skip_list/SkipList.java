@@ -1,5 +1,6 @@
 package com.sylvanas.algorithms_exercise.skip_list;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
@@ -17,7 +18,7 @@ import java.util.Random;
  *
  * @author SylvanasSun <sylvanas.sun@gmail.com>
  */
-public class SkipList<K extends Comparable<K>, V> {
+public class SkipList<K extends Comparable<K>, V> implements Iterable<K> {
 
     protected static final Random randomGenerator = new Random();
 
@@ -197,6 +198,46 @@ public class SkipList<K extends Comparable<K>, V> {
         return sb.toString();
     }
 
+    @Override
+    public Iterator<K> iterator() {
+        return new SkipListIterator<K, V>(head);
+    }
+
+    protected static class SkipListIterator<K extends Comparable<K>, V> implements Iterator<K> {
+
+        private Node<K, V> node;
+
+        public SkipListIterator(Node<K, V> node) {
+            while (node.getDown() != null)
+                node = node.getDown();
+
+            while (node.getPrevious() != null)
+                node = node.getPrevious();
+
+            if (node.getNext() != null)
+                node = node.getNext();
+
+            this.node = node;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return this.node != null;
+        }
+
+        @Override
+        public K next() {
+            K result = node.getKey();
+            node = node.getNext();
+            return result;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
     protected static class Node<K extends Comparable<K>, V> {
 
         private K key;
@@ -298,6 +339,9 @@ public class SkipList<K extends Comparable<K>, V> {
         assert !skipList.empty();
         assert !skipList.contains(11);
         assert skipList.get(5).equals("5");
+        int count = 0;
+        for (Integer i : skipList)
+            assert i.equals(count++);
         skipList.remove(9);
         assert skipList.size() == 9;
         assert skipList.get(9) == null;
