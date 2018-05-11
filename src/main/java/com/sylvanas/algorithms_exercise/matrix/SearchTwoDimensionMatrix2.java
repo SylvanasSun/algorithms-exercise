@@ -1,4 +1,4 @@
-package com.sylvanas.algorithms_exercise.math;
+package com.sylvanas.algorithms_exercise.matrix;
 
 /**
  * 写出一个高效的算法来搜索m×n矩阵中的值，返回这个值出现的次数。

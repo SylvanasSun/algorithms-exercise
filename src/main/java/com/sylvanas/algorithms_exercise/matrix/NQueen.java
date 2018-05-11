@@ -1,4 +1,4 @@
-package com.sylvanas.algorithms_exercise.array;
+package com.sylvanas.algorithms_exercise.matrix;
 
 /**
  * Given a chess board having N×N cells,

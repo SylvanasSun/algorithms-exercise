@@ -1,4 +1,4 @@
-package com.sylvanas.algorithms_exercise.array;
+package com.sylvanas.algorithms_exercise.matrix;
 
 import java.util.ArrayList;
 import java.util.List;

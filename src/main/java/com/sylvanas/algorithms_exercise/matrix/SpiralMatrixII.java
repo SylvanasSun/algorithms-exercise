@@ -1,4 +1,4 @@
-package com.sylvanas.algorithms_exercise.array;
+package com.sylvanas.algorithms_exercise.matrix;
 
 /**
  * 螺旋矩阵 II
