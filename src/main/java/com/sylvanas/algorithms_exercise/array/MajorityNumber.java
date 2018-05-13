@@ -1,13 +1,12 @@
 package com.sylvanas.algorithms_exercise.array;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 主元素
  * 给定一个整型数组，找出主元素，它在数组中的出现次数严格大于数组元素个数的二分之一。
  * 挑战:要求时间复杂度为O(n)，空间复杂度为O(1)
- *
+ * <p>
  * Created by SylvanasSun on 10/10/2017.
  */
 public class MajorityNumber {
@@ -38,20 +37,6 @@ public class MajorityNumber {
         }
 
         return candidate;
-    }
-
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++)
-            list.add(1);
-        for (int i = 0; i < 10; i++)
-            list.add(2);
-        list.add(6);
-        list.add(7);
-        for (int i = 0; i < 6; i++)
-            list.add(10);
-        int result = solution(list);
-        assert result == 2;
     }
 
 }
